@@ -1,13 +1,15 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { GComponent } from "./components/g-component/g-component";
+import { TesteComponent } from './components/teste/teste';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, GComponent],
+  standalone: true, 
+  imports: [RouterOutlet, TesteComponent],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrls: ['./app.scss']
 })
 export class App {
-  protected readonly title = signal('app-gustavo');
+  protected readonly title = signal('Gustavo-Primeiro-Projeto');
 }
+ 
