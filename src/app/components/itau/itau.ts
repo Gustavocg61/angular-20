@@ -3,12 +3,13 @@ import { ReceberApi } from '../../services/receber-api';
 import { CotacaoModel } from '../../models/cotacao-model';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import {CardCotation} from '../../shared/card-cotation/card-cotation';
 
 
 @Component({
   selector: 'app-itau',
   standalone: true,
-  imports: [MatButtonModule, MatCardModule, ],
+  imports: [MatButtonModule, MatCardModule, CardCotation,],
   templateUrl: './itau.html',
   styleUrls: ['./itau.scss'],
 })

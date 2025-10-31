@@ -1,25 +1,8 @@
 <div class="cotacao">
     @if (itau) {
-        <mat-card class="card" appearance="outlined">
-            <mat-card-header>
-                <mat-card-title>
-                    {{itau.requestedAT}}
-                </mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-
-            @for (item of itau.results; track $index) {
-                <p><img [src]="item.logourl" alt="" srcset=""></p>
-                <p>{{item.longName}}</p>
-                <p>{{item.currency}}</p>
-                <p>{{item.earningsPerShare}}</p>
-            }
-
-            </mat-card-content>
-            <mat-card-footer class="card-footer">
-            <button matButton="filled" (click)="getData()">Verificar</button>
-            </mat-card-footer>
-        </mat-card>
+      @for (result of itau.results; track $index) {
+        <app-card-cotation [requestedAT]="itau.requestedAT" [result]="result"></app-card-cotation>
+      }
     }
 </div>
 

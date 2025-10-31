@@ -13,7 +13,10 @@ export class ReceberApi {
     return this.srv.get('https://brapi.dev/api/quote/ITUB4?fundamental=true&dividends=true')
   }
   getPetrobras(): Observable<any>{
-    return this.srv.get('https://brapi.dev/api/quote/PETR4,VALE3,MGLU3?range=1mo&interval=1d')
+    return this.srv.get('https://brapi.dev/api/quote/PETR4,MGLU3?range=1mo&interval=1d')
   }
-  
+  getVale(): Observable<any>{
+    return this.srv.get('https://brapi.dev/api/quote/VALE3?range=1mo&interval=1d')
+  }
+
 }
