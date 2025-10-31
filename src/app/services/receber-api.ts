@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import {EodhdModel} from '../models/cotacao-eodhd-model';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,9 @@ export class ReceberApi {
   }
   getVale(): Observable<any>{
     return this.srv.get('https://brapi.dev/api/quote/VALE3?range=1mo&interval=1d')
+  }
+  getAAPL(): Observable<EodhdModel>{
+    return this.srv.get<EodhdModel>('https://eodhd.com/api/fundamentals/AAPL.US?api_token=demo&fmt=json')
   }
 
 }

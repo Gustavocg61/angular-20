@@ -1,0 +1,7 @@
+<div class="cotacao">
+  @if (aapl) {
+    @for (result of aapl.results; track $index) {
+      <app-card-cotation [requestedAT]="aapl.requestedAT" [result]="result"></app-card-cotation>
+    }
+  }
+</div>

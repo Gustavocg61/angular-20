@@ -23,6 +23,7 @@ export class ItauComponent implements OnInit{
 
   getData(): void {
     this.service.getItau().subscribe(response => {
+      console.log(response);
       this.itau = response;
     })
   }
