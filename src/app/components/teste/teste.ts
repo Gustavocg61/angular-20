@@ -4,6 +4,7 @@ import { ItauModel } from './itau-model';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 
+
 @Component({
   selector: 'app-teste',
   standalone: true,
@@ -12,9 +13,13 @@ import {MatCardModule} from '@angular/material/card';
   styleUrls: ['./teste.scss'],
 })
 export class TesteComponent implements OnInit{
-  itau!: ItauModel;
   
-  constructor(private service: ReceberApi){}
+  itau!: ItauModel;
+  Petrol!: ItauModel;
+  constructor(private service: ReceberApi){
+    this.getData()
+    this.getPetrobras
+    }
 
   getData(): void {
     this.service.getItau().subscribe(response => {
@@ -22,9 +27,15 @@ export class TesteComponent implements OnInit{
       this.itau = response;
     })
   }
- 
+   getPetrobras(): void {
+    this.service.getPetrobras().subscribe(response => {
+      console.log(response)
+      this.Petrol = response;
+    })
+  }
   ngOnInit(): void{
     this.getData();
+    this.getPetrobras();
   }
 }
 
