@@ -1,26 +1,26 @@
 import {Component, OnInit} from '@angular/core';
-import {CardCotation} from '../../shared/card-cotation/card-cotation';
 import {CotacaoModel} from '../../models/cotacao-model';
 import {ReceberApi} from '../../services/receber-api';
+import {CardCotation} from '../../shared/card-cotation/card-cotation';
 
 @Component({
-  selector: 'app-petrobras',
+  selector: 'app-vale',
   imports: [
     CardCotation
   ],
-  templateUrl: './petrobras.html',
-  styleUrl: './petrobras.scss',
+  templateUrl: './vale.html',
+  styleUrl: './vale.scss',
 })
-export class Petrobras implements OnInit {
-  petro!: CotacaoModel;
+export class Vale implements OnInit {
+  vale!: CotacaoModel;
 
   constructor(private service: ReceberApi){
     this.getData()
   }
 
   getData(): void {
-    this.service.getPetrobras().subscribe(response => {
-      this.petro = response;
+    this.service.getVale().subscribe(response => {
+      this.vale = response;
     })
   }
 
