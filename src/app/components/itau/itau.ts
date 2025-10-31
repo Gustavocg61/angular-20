@@ -1,41 +1,33 @@
 import { Component, OnInit } from '@angular/core';
 import { ReceberApi } from '../../services/receber-api';
-import { ItauModel } from './itau-model';
+import { CotacaoModel } from '../../models/cotacao-model';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 
 
 @Component({
-  selector: 'app-teste',
+  selector: 'app-itau',
   standalone: true,
   imports: [MatButtonModule, MatCardModule, ],
-  templateUrl: './teste.html',
-  styleUrls: ['./teste.scss'],
+  templateUrl: './itau.html',
+  styleUrls: ['./itau.scss'],
 })
-export class TesteComponent implements OnInit{
-  
-  itau!: ItauModel;
-  Petrol!: ItauModel;
+export class ItauComponent implements OnInit{
+
+  itau!: CotacaoModel;
+
   constructor(private service: ReceberApi){
     this.getData()
-    this.getPetrobras
-    }
+  }
 
   getData(): void {
     this.service.getItau().subscribe(response => {
-      console.log(response)
       this.itau = response;
     })
   }
-   getPetrobras(): void {
-    this.service.getPetrobras().subscribe(response => {
-      console.log(response)
-      this.Petrol = response;
-    })
-  }
+
   ngOnInit(): void{
     this.getData();
-    this.getPetrobras();
   }
 }
 
