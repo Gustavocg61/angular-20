@@ -76,7 +76,6 @@ export class Aapl implements OnInit {
           }
         ]
       }
-      console.log(this.aapl);
     })
   }
 
