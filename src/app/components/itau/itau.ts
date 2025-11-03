@@ -18,7 +18,7 @@ export class ItauComponent implements OnInit{
   itau!: CotacaoModel;
 
   constructor(private service: ReceberApi){
-    this.getData()
+    this.getData();
   }
 
   getData(): void {
