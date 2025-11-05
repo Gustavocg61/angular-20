@@ -10,8 +10,7 @@ import {Results} from '../../models/cotacao-results';
     MatCard,
     MatCardContent,
     MatCardFooter,
-    MatCardHeader,
-    MatCardTitle
+
   ],
   templateUrl: './card-cotation.html',
   styleUrl: './card-cotation.scss',
