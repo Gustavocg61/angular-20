@@ -1,21 +1,46 @@
-.titulo {
-  color: red;
+.paragrafo {
+  color: black;
   text-align: center;
+  text-shadow: 3px 3px 3px rgb(3, 112, 255);
   font-size: 20px;
   font-weight: bold;
   padding: 10px 0;
   margin: 0;
+  background-color: #4c7ca3;
 
 }
-.subtitulo {
+
+.titulo{
+  color: white;
+   text-align: center;
+    text-shadow: 3px 3px 3px black;
+    font-weight: bold;
+     background-color: #0051ff;
+      padding: 50px 0;
+       margin: 0;
+
+}
+.topo{
   color: white;
   text-align: center;
+  font-family: arial;
   font-size: 20px;
   padding: 10px 0;
-  margin: 0;
+  margin-bottom: 0;
+  background: rgb(10, 33, 75);
 
+}
+.rodape{
+  background-color: white;
+  color: black;
+  text-align: center;
+  margin-top: 30px;
 }
 
 app-aapl {
-  margin-top: 30px;
+  margin-top: 50px;
+}
+
+app-vale {
+  margin-top: 70px;
 }
